@@ -1,0 +1,26 @@
+{
+  "name": "authentication-service",
+  "version": "0.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/Heidric/authentication-service.git"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "pg": "^7.7.1",
+    "redis": "^2.8.0",
+    "sequelize": "^4.42.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.0",
+    "eslint-plugin-node": "^8.0.0"
+  }
+}
