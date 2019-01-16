@@ -1,6 +1,5 @@
 const db                  = require('../db');
 const bcrypt              = require('bcrypt');
-const config              = require('../config');
 const uuid                = require('uuid/v1');
 const redis               = require('redis');
 const client              = redis.createClient();

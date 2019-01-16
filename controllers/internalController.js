@@ -1,5 +1,4 @@
 const db                  = require('../db');
-const config              = require('../config');
 const redis               = require('redis');
 const client              = redis.createClient();
 const internalServerError = require('../responses/internalServerError');

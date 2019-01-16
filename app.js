@@ -17,11 +17,11 @@ db.sequelize.sync()
 
     app.use(express.static('public'));
 
-    app.use('/api/auth',                      require('./routes/auth'));
+    app.use('/api/v1/auth',                      require('./routes/auth'));
 
-    app.use('/api/internal/auth', isInternal, require('./routes/internal'));
+    app.use('/api/v1/internal/auth', isInternal, require('./routes/internal'));
 
-    app.all('*',                              require('./responses/routeNotFound'));
+    app.all('*',                                 require('./responses/routeNotFound'));
 
   });
 
