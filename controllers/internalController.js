@@ -6,7 +6,9 @@ async function authenticate(req, res, next) {
   const client  = redis.createClient();
   const session = req.body.session;
 
-
+  if (!session) {
+    return res.status(400).json({ message: 'Session cannot be empty.' });
+  }
 
   return client.get(session, async (error, result) => {
     if (error) {
