@@ -4,6 +4,6 @@ module.exports = (req, res, next) => {
   if (req.headers['service_auth']) {
     return next();
   } else {
-    return require('../responses/routeNotFound');
+    return require('../responses/routeNotFound')(req, res, next);
   }
 };

@@ -4,7 +4,8 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "test": "jest auth.api.test.js internal.api.test.js --coverage --forceExit --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -14,9 +15,11 @@
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "jest": "^23.6.0",
     "pg": "^7.7.1",
     "redis": "^2.8.0",
     "sequelize": "^4.42.0",
+    "supertest": "^3.4.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {

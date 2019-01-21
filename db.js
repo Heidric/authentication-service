@@ -15,7 +15,9 @@ const db        = new Sequelize(config.database.dbName, config.database.login, c
     idle:    10000
   },
 
-  operatorsAliases: false
+  operatorsAliases: false,
+
+  logging: process.env.NODE_ENV === 'develop'
 });
 
 const models = new Map([

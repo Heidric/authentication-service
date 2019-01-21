@@ -2,7 +2,6 @@ const db                  = require('../db');
 const bcrypt              = require('bcrypt');
 const uuid                = require('uuid/v1');
 const redis               = require('redis');
-const client              = redis.createClient();
 const internalServerError = require('../responses/internalServerError');
 
 async function register(req, res, next) {
@@ -38,6 +37,7 @@ async function register(req, res, next) {
 }
 
 async function login(req, res, next) {
+  const client      = redis.createClient();
   const accountData = req.body;
 
   const params = await checkParams(accountData);
@@ -97,6 +97,8 @@ async function checkParams(accountData) {
       field: 'account',
       error: 'Account data cannot be empty'
     });
+
+    return params;
   }
 
   const mandatoryFields = [ 'username', 'password' ];

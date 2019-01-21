@@ -4,5 +4,6 @@ module.exports = {
     login:    process.env.DB_LOGIN,
     password: process.env.DB_PASSWORD,
     host:     process.env.DB_ADDRESS
-  }
+  },
+  internal_key: process.env.INTERNAL_KEY
 };
