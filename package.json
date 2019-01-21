@@ -4,7 +4,8 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "node ./server.js"
+    "start": "node ./server.js",
+    "test": "jest auth.api.test.js internal.api.test.js --coverage --forceExit --detectOpenHandles"
   },
   "repository": {
     "type": "git",

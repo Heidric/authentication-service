@@ -20,7 +20,7 @@ describe('Authentication API', () => {
       });
   });
 
-  it('should throw validation error for username', () => {
+  it('should return validation error for username', () => {
     return request(server)
       .post('/api/v1/auth/register')
       .send({
@@ -31,7 +31,7 @@ describe('Authentication API', () => {
       });
   });
 
-  it('should throw validation error for password', () => {
+  it('should return validation error for password', () => {
     return request(server)
       .post('/api/v1/auth/register')
       .send({
@@ -54,7 +54,7 @@ describe('Authentication API', () => {
       });
   });
 
-  it('should throw "Already taken" error', () => {
+  it('should return "Already taken" error', () => {
     return request(server)
       .post('/api/v1/auth/register')
       .send({
