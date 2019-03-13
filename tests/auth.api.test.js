@@ -70,12 +70,11 @@ describe('Authentication API', () => {
     return request(server)
       .post('/api/v1/auth/login')
       .send({
-        username: user.username,
+        username: user.faultyUsername,
         password: user.password
       })
       .then(response => {
-        expect(response.statusCode).toBe(200);
-        expect(response.body.session.length).toBe(36);
+        expect(response.statusCode).toBe(404);
       });
   });
 
